@@ -1,0 +1,12 @@
+<?xml version="1.0"?>  
+<robot name="multiple_mobile_manipulator" xmlns:xacro="http://ros.org/wiki/xacro">  
+    <xacro:include filename="$(find mm_description)/urdf/mm_with_jaka.xacro"/>  
+    <xacro:include filename="$(find mm_description)/urdf/mm_with_ur.xacro"/> 
+    <link name="world"/>
+    <xacro:mm_with_jaka prefix="" x_offset="0" y_offset="0" yaw_offset="0" support_height="0" />
+    <xacro:mm_with_jaka prefix="robot2_" x_offset="2" y_offset="0" yaw_offset="0" support_height="0"/>
+    <xacro:mm_with_jaka prefix="robot3_" x_offset="4" y_offset="0" yaw_offset="0" support_height="0"/>
+    <xacro:mm_with_ur prefix="robot4_" x_offset="6" y_offset="0" yaw_offset="0" support_height="0"/>
+    <xacro:mm_with_ur prefix="robot5_" x_offset="8" y_offset="0" yaw_offset="0" support_height="0"/>
+    <xacro:mm_with_ur prefix="robot6_" x_offset="10" y_offset="0" yaw_offset="0" support_height="0"/>
+</robot>

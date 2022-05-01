@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<robot name="rg2" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="rg2" params="prefix">
+
+    <link name="${prefix}rg2_body_link">
+      <visual>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mm_description/meshes/rg2.DAE"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://mm_description/meshes/rg2_collision.STL"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}end_effector"/>
+    <joint name="${prefix}rg2_eef_joint" type="fixed">
+      <origin rpy="0 0 ${-pi/2}" xyz="0.0 0.0 0.195"/>
+      <parent link="${prefix}rg2_body_link"/>
+      <child link="${prefix}end_effector"/>
+    </joint>
+
+    <joint name="${prefix}rg2_to_tool0" type="fixed">
+        <parent link="${prefix}tool0" />
+        <child link="${prefix}rg2_body_link" />
+        <origin xyz="0 0 0.035" rpy="0.0 0 ${pi/2}" />
+    </joint>  
+
+  </xacro:macro>
+</robot>

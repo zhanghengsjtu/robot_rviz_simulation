@@ -1,0 +1,8 @@
+prefix=/home/leon/Desktop/robot_rviz_simulation/devel
+
+Name: jaka_robot
+Description: Description of jaka_robot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+agv_description:jaka_robot:mm_description:ur_robot
+-DCATKIN_DEVEL_PREFIX=/home/leon/Desktop/robot_rviz_simulation/devel -DCMAKE_INSTALL_PREFIX=/home/leon/Desktop/robot_rviz_simulation/install -G Unix Makefiles

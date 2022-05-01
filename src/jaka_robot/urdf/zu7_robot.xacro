@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="zu7" xmlns:xacro="http://ros.org/wiki/xacro" >
+
+  <!-- zu7 -->
+  <xacro:include filename="$(find jaka_robot)/urdf/zu7.urdf.xacro" />
+
+  <!-- arm -->
+  <xacro:zu7_robot prefix=""/>
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+</robot>

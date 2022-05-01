@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/leon/mobile_manipulator_model/devel/include/**",
+                "/home/leon/capability_map/devel/include/**",
+                "/opt/ros/kinetic/include/**",
+                "/home/leon/capability_map/src/reuleaux/base_placement_plugin/include/**",
+                "/home/leon/mobile_manipulator_model/src/robot_rviz_simulation/ur_rviz_simulation/iai_stuff/iai_control_pkgs/iai_robot_mechanism_controllers/include/**",
+                "/home/leon/capability_map/src/reuleaux/map_creator/include/**",
+                "/home/leon/capability_map/src/mm_map_creator/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

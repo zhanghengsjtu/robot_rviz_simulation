@@ -1,0 +1,8 @@
+<?xml version="1.0"?>  
+<robot name="robot" xmlns:xacro="http://ros.org/wiki/xacro">  
+
+  <xacro:include filename="$(find mm_description)/urdf/mm_with_ur.xacro"/>  
+  <link name="world"/>
+  <xacro:mm_with_ur prefix="" x_offset="0" y_offset="0" yaw_offset="0" support_height="0.0" />
+
+</robot>

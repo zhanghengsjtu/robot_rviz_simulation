@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<robot name="mobile_manipulator" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find agv_description)/urdf/agv.xacro"/> 
+  <xacro:include filename="$(find ur_robot)/urdf/ur5.urdf.xacro" />
+  <xacro:include filename="$(find mm_description)/urdf/force_sensor.xacro" />
+  <xacro:include filename="$(find mm_description)/urdf/rg2.xacro" />
+
+  <xacro:macro name="mobile_manipulator" params="prefix x_offset y_offset yaw_offset support_height">
+
+    <xacro:agv prefix="${prefix}" x_offset="${x_offset}" y_offset="${y_offset}" yaw_offset="${yaw_offset}"/>
+    <xacro:ur5_robot prefix="${prefix}" joint_limited="true"/>
+    <xacro:force_sensor prefix="${prefix}"/>
+    <xacro:rg2 prefix="${prefix}"/>
+
+    <joint name="${prefix}ur5_to_agv" type="fixed">
+      <parent link="${prefix}agv_base_link" />
+      <child link="${prefix}base_link" />
+      <origin xyz="0.1395 0 ${support_height + 0.393}" rpy="0.0 0.0 0.0" />
+    </joint>
+    
+    <link name="${prefix}support_link">
+      <visual>
+      <origin xyz="0 0 ${support_height/2}" rpy="0 0 0"/>
+        <material name="grey">
+          <color rgba="${185/255} ${185/255} ${185/255} 1.0"/>
+        </material>
+      <geometry>
+        <cylinder radius="0.075" length="${support_height}"/>
+      </geometry>
+      </visual>
+      <collision>
+      <origin xyz="0 0 ${support_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.08" length="${support_height}"/>
+      </geometry>
+      </collision>
+    </link>
+
+    <joint name="${prefix}support_link_to_agv" type="fixed">
+      <parent link="${prefix}agv_base_link" />
+      <child link="${prefix}support_link" />
+      <origin xyz="0.1395 0 0.393" rpy="0.0 0.0 0.0" />
+    </joint>
+
+  </xacro:macro>
+</robot>

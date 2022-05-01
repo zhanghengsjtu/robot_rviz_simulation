@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="zu7" >
+
+  <!-- zu7 -->
+  <xacro:include filename="$(find jaka_robot)/urdf/zu7.urdf.xacro" />
+
+  <!-- arm -->
+  <xacro:zu7_robot prefix="robot1_"/>
+  <xacro:zu7_robot prefix="robot2_"/>
+  <xacro:zu7_robot prefix="robot3_"/>
+  <xacro:zu7_robot prefix="robot4_"/>
+  <xacro:zu7_robot prefix="robot5_"/>
+
+  <link name="world" />
+
+  <joint name="robot1_base_to_world" type="fixed">
+    <parent link="world" />
+    <child link = "robot1_base_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="robot2_base_to_world" type="fixed">
+    <parent link="world" />
+    <child link = "robot2_base_link" />
+    <origin xyz="1.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="robot3_base_to_world" type="fixed">
+    <parent link="world" />
+    <child link = "robot3_base_link" />
+    <origin xyz="2.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="robot4_base_to_world" type="fixed">
+    <parent link="world" />
+    <child link = "robot4_base_link" />
+    <origin xyz="3.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+  <joint name="robot5_base_to_world" type="fixed">
+    <parent link="world" />
+    <child link = "robot5_base_link" />
+    <origin xyz="4.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+</robot>

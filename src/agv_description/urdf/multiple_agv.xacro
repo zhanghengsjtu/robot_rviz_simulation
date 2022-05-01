@@ -1,0 +1,11 @@
+<?xml version="1.0"?>  
+<robot name="multiple_agv" xmlns:xacro="http://ros.org/wiki/xacro">  
+    <xacro:include filename="$(find agv_description)/urdf/agv.xacro"/>  
+    <link name="world"/>
+    <xacro:agv prefix="robot1_" x_offset="0" y_offset="0" yaw_offset="0"/>
+    <xacro:agv prefix="robot2_" x_offset="1" y_offset="0" yaw_offset="0"/>
+    <xacro:agv prefix="robot3_" x_offset="2" y_offset="0" yaw_offset="0"/>
+    <xacro:agv prefix="robot4_" x_offset="3" y_offset="0" yaw_offset="0"/>
+    <xacro:agv prefix="robot5_" x_offset="4" y_offset="0" yaw_offset="0"/>
+    <xacro:agv prefix="robot6_" x_offset="5" y_offset="0" yaw_offset="0"/>
+</robot>

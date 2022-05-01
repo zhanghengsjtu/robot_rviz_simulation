@@ -1,0 +1,8 @@
+prefix=/home/leon/Desktop/robot_rviz_simulation/devel
+
+Name: object_description
+Description: Description of object_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
